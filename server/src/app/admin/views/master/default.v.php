@@ -11,7 +11,7 @@
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">		
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="/wiseman.css">
+		<link rel="stylesheet" href="http://wisemanstyle.karel.lan/admin.min.css">
 				
 		<title>Wiseman - <?=$this->data['page_title'] ?></title>
 	</head>
