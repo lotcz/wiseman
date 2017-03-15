@@ -1,20 +1,20 @@
 <?php
-
-	$this->page_title = $this->t('Contexts');
-	$this->templates['page'] = 'admin';
-	
-	$table = new zAdminTable(
-		'contexts', 		
-		'context'
-	);
-	
-	$table->add([		
-		[
-			'name' => 'context_name',
-			'label' => 'Name'			
+	$this->setPageTitle('Contexts');	
+	$this->renderAdminTable(
+		'viewContexts', 		
+		'context',
+		[		
+			[
+				'name' => 'context_name',
+				'label' => 'Name'			
+			],
+			[
+				'name' => 'context_description',
+				'label' => 'Description'			
+			],
+			[
+				'name' => 'language_name',
+				'label' => 'Language'			
+			]
 		]
-	]);
-	
-	$table->prepare($this->db);
-	
-	$this->data['table'] = $table;
+	);

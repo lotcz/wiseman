@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WisemanWindowsConsole", "WisemanWindowsConsole\WisemanWindowsConsole.vbproj", "{7736573C-571E-430B-A627-789AC8FD9B1F}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Wiseman", "Wiseman\Wiseman.vbproj", "{87289918-6699-45DA-A481-1B3BEEEADE7D}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WisemanWindowsClient", "WisemanWindowsClient\WisemanWindowsClient.vbproj", "{1A748C41-6C97-4543-AB0C-689D3BE6487C}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "karel.JSON", "karel.JSON\karel.JSON.vbproj", "{BFD24FA5-725C-4641-A821-6FF1E3D83254}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7736573C-571E-430B-A627-789AC8FD9B1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7736573C-571E-430B-A627-789AC8FD9B1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7736573C-571E-430B-A627-789AC8FD9B1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7736573C-571E-430B-A627-789AC8FD9B1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87289918-6699-45DA-A481-1B3BEEEADE7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87289918-6699-45DA-A481-1B3BEEEADE7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87289918-6699-45DA-A481-1B3BEEEADE7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87289918-6699-45DA-A481-1B3BEEEADE7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A748C41-6C97-4543-AB0C-689D3BE6487C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A748C41-6C97-4543-AB0C-689D3BE6487C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A748C41-6C97-4543-AB0C-689D3BE6487C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A748C41-6C97-4543-AB0C-689D3BE6487C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFD24FA5-725C-4641-A821-6FF1E3D83254}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFD24FA5-725C-4641-A821-6FF1E3D83254}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFD24FA5-725C-4641-A821-6FF1E3D83254}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFD24FA5-725C-4641-A821-6FF1E3D83254}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

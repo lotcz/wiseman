@@ -8,7 +8,7 @@
 		'max_attempts' => 100,
 		
 		'min_password_length' => 5,
-		
+				
 		//time interval in seconds after which session will expire
 		'session_expire' => 60*60*24*7, //7 days
 	

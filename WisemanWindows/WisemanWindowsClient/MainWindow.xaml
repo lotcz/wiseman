@@ -1,0 +1,55 @@
+﻿<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WisemanWindowsClient"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded" WindowStyle="None" Padding="0" Margin="0" BorderThickness="0" AllowsTransparency="True" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" Foreground="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}" FontFamily="{DynamicResource {x:Static SystemFonts.MenuFontFamilyKey}}">
+    <Grid Margin="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid Margin="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="FakeWindowHead" Padding="0,5" >
+                <Image Height="3" SnapsToDevicePixels="False" Source="Images/splitter.png" HorizontalAlignment="Stretch" Stretch="Fill" />
+            </Label>
+
+            <Label x:Name="FakeWindowClose" Grid.Column="1" Padding="0">
+                <StackPanel Orientation="Horizontal" Margin="0">
+                    <TextBlock Text="Zavřít" Padding="0" Margin="0" FontSize="10" VerticalAlignment="Top" />
+                    <Image SnapsToDevicePixels="False" Margin="3,0,0,0" Source="Images/close.png" Height="10" Width="10" HorizontalAlignment="Stretch" VerticalAlignment="Center" />
+                </StackPanel>
+                            
+            </Label>
+        </Grid>
+
+        <TextBlock x:Name="quoteTextBlock" Grid.Row="1" Margin="10,10,10,10" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="32" />
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Text="Autor citátu:" />
+            <TextBlock Margin="5,0,0,0" x:Name="AuthorTextBlock" FontWeight="Bold" />
+            <TextBlock Margin="10,0,0,0" Text="Původ citátu:" />
+            <TextBlock Margin="5,0,0,0" x:Name="SourceTextBlock" FontWeight="Bold" />
+        </StackPanel>
+
+        <Grid Margin="0" Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button x:Name="NextButton" Content="Další citát" Margin="10" Padding="10" />
+            <Button x:Name="NotifButton" Grid.Column="1" Content="Parser test" Margin="10" Padding="10" />
+        </Grid>
+        
+    </Grid>
+</Window>

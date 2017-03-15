@@ -45,4 +45,14 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+
 server/sql/secret.sql
+WisemanWindows/karel.JSON/obj/
+WisemanWindows/karel.JSON/bin/
+WisemanWindows/Wiseman/obj/
+WisemanWindows/Wiseman/bin/
+WisemanWindows/WisemanWindowsClient/bin/
+WisemanWindows/WisemanWindowsClient/obj/
+WisemanWindows/WisemanWindowsConsole/bin/
+WisemanWindows/WisemanWindowsConsole/obj/
