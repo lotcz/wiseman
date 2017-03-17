@@ -4,8 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WisemanWindowsClient"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded" WindowStyle="None" Padding="0" Margin="0" BorderThickness="0" AllowsTransparency="True" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" Foreground="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}" FontFamily="{DynamicResource {x:Static SystemFonts.MenuFontFamilyKey}}">
+        mc:Ignorable="d" Style="{StaticResource BasicWindowStyle}"
+        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded" WindowStyle="None" Padding="0" Margin="0" BorderThickness="0" AllowsTransparency="True" >
     <Grid Margin="0">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />

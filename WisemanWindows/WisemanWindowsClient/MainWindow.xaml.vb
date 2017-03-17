@@ -32,12 +32,8 @@ Class MainWindow
     End Sub
 
     Private Sub NotifButton_Click(sender As Object, e As RoutedEventArgs) Handles NotifButton.Click
-        Dim json As karel.JSON.JSONObject = karel.JSON.JSONObject.Parse("{test:'Hello',json:'World!',my:'this is json'}")
-        If json.IsObject Then
-            quoteTextBlock.Text = json("my").ToString()
-            AuthorTextBlock.Text = json("json").ToString()
-            SourceTextBlock.Text = json("test").ToString()
-        End If
+        Dim app As WisemanWindowsClient.Application = Application.Current
+        app.LoadTheme("MyNewTheme")
     End Sub
 
 End Class

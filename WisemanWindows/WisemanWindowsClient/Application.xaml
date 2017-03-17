@@ -4,6 +4,11 @@
     xmlns:local="clr-namespace:WisemanWindowsClient"
     StartupUri="MainWindow.xaml">
     <Application.Resources>
-        
+
+        <Style TargetType="{x:Type Window}" x:Key="BasicWindowStyle">
+            <Setter Property="Background" Value="{DynamicResource BackgroundBrushColor}"/>
+            <Setter Property="Foreground" Value="{DynamicResource ForegroundBrushColor}"/>
+        </Style>
+
     </Application.Resources>
 </Application>
