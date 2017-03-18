@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Quote.vb" />
+    <Compile Include="SerializableSettings.vb" />
     <Compile Include="WisemanClient.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

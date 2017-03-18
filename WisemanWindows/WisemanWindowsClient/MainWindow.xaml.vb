@@ -4,6 +4,12 @@ Class MainWindow
 
     Private Property client As New WisemanClient()
 
+    Private ReadOnly Property WisemanApplication As WisemanWindowsClient.Application
+        Get
+            Return Application.Current
+        End Get
+    End Property
+
     Private Async Sub LoadRandomQuote()
         Dim q As Quote = Await client.FetchRandomQuote()
         quoteTextBlock.Text = q.Text
@@ -31,9 +37,10 @@ Class MainWindow
         End If
     End Sub
 
-    Private Sub NotifButton_Click(sender As Object, e As RoutedEventArgs) Handles NotifButton.Click
-        Dim app As WisemanWindowsClient.Application = Application.Current
-        app.LoadTheme("MyNewTheme")
+    Private Sub TestButton_Click(sender As Object, e As RoutedEventArgs) Handles TestButton.Click
+        Dim window As New SettingsWindow()
+        window.Owner = Me
+        window.ShowDialog()
     End Sub
 
 End Class

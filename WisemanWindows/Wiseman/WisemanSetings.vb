@@ -1,5 +1,7 @@
-﻿Public Class WisemanSettings
+﻿<Serializable>
+Public Class WisemanSettings
+    Inherits SerializableSettings
 
-    Public Property WisemanServerURL As String = "http://wiseman.loc"
+    Public WisemanServerURL As String = "http://wiseman.loc"
 
 End Class

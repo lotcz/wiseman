@@ -48,7 +48,7 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Button x:Name="NextButton" Content="Další citát" Margin="10" Padding="10" />
-            <Button x:Name="NotifButton" Grid.Column="1" Content="Parser test" Margin="10" Padding="10" />
+            <Button x:Name="TestButton" Grid.Column="1" Content="Settings" Margin="10" Padding="10" />
         </Grid>
         
     </Grid>

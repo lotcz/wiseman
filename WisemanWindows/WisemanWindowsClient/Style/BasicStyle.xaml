@@ -2,9 +2,15 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:WisemanWindowsClient">
 
-    <Style TargetType="{x:Type Window}" x:Key="BasicWindowStyle">
+    <Style TargetType="{x:Type Control}" x:Key="BasicControlStyle">
         <Setter Property="Background" Value="{DynamicResource BackgroundBrushColor}"/>
         <Setter Property="Foreground" Value="{DynamicResource ForegroundBrushColor}"/>
+    </Style>
+
+    <Style TargetType="{x:Type Window}" x:Key="BasicWindowStyle" BasedOn="{StaticResource BasicControlStyle}">        
+    </Style>
+
+    <Style TargetType="{x:Type RadioButton}" BasedOn="{StaticResource BasicControlStyle}">
     </Style>
     
 </ResourceDictionary>
