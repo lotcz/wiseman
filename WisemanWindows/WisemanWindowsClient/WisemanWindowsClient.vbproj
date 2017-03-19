@@ -80,11 +80,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Controls\Balloon.xaml.vb">
-      <DependentUpon>Balloon.xaml</DependentUpon>
+    <Compile Include="Controls\QuoteBalloon.xaml.vb">
+      <DependentUpon>QuoteBalloon.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\FakeHeaderControl.xaml.vb">
       <DependentUpon>FakeHeaderControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WaitAnimationControl.xaml.vb">
+      <DependentUpon>WaitAnimationControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Scheduler\WisemanSchedule.vb" />
     <Compile Include="Scheduler\SchedulerAllowedDays.vb" />
@@ -99,11 +102,15 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
-    <Page Include="Controls\Balloon.xaml">
+    <Page Include="Controls\QuoteBalloon.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\FakeHeaderControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\WaitAnimationControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

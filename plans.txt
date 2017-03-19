@@ -1,4 +1,42 @@
-- android app
+Contexts and app types
+----------------------
+	- hlášky z Cimrmanů
+	- česká přísloví
+	- citáty z Bible
+	- citáty řeckých filosofů
+	- hlášky z českých filmů	
+	
+	- přestaňte se stresovat v práci
+	- recept dne
+	
+
+Windows app release 1
+---------------------
+	
+	- display quotes as balloons which have button that allow to open main window
+	- balloon only disappear on user interaction
+	- create Cimrman theme
+
+	- add installer and uninstaller
+
+	next releases:	
+	- improve themes
+	- allow configuration of regular quote display (select days, time)
+		
+Wiseman server version 1
+------------------------
+
+	- improve look of admin area
+	- create v1 of wiseman API (used by Window app release 1)
+	- create import function for quotes
+	- create at least 100 quotes in the first context
+	
+Windows screensaver
+-------------------
+
+	
+Android app
+-----------
 	- alarm
-- windows app
-	- screensaver
+
+	

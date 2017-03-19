@@ -10,4 +10,7 @@
 	$q->set('quote_id', $quote->ival('quote_id'));
 	$q->save();
 		
+	//!!!!
+	//sleep(3);
+	
 	$this->setData('quote', $quote->data);

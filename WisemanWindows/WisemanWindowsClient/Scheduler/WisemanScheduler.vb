@@ -18,6 +18,10 @@ Public Class WisemanScheduler
         Reload()
     End Sub
 
+    Public Sub StopScheduler()
+        StopTimer()
+    End Sub
+
     Private Sub StopTimer()
         If TypeOf (SchedulerTimer) Is Timer Then
             SchedulerTimer.Stop()

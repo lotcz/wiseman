@@ -8,9 +8,17 @@ Class Application
 
     Private TrayIcon As TaskbarIcon
 
+    Private CurrentQuote As Quote
+
+    Public Client As WisemanClient
+
     Public ReadOnly Property MyMainWindow As WisemanWindowsClient.MainWindow
         Get
-            Return MainWindow
+            If TypeOf (MainWindow) Is WisemanWindowsClient.MainWindow Then
+                Return MainWindow
+            Else
+                Return Nothing
+            End If
         End Get
     End Property
 
@@ -58,19 +66,26 @@ Class Application
 #Region "Public app methods"
 
     Public Sub ShowMainWindow()
-        If (Me.MainWindow) Is Nothing Then
+        StopScheduler()
+        If TypeOf MyMainWindow Is WisemanWindowsClient.MainWindow AndAlso MyMainWindow.IsLoaded Then
+            MyMainWindow.BringIntoView()
+        Else
             Me.MainWindow = New WisemanWindowsClient.MainWindow()
-            Me.MainWindow.Show()
+            If TypeOf (CurrentQuote) Is Quote Then
+                MyMainWindow.DisplayQuote(CurrentQuote)
+            End If
+            MyMainWindow.Show()
         End If
+        HideQuoteBalloon()
     End Sub
 
-    Public Sub TestBalloon()
-        TrayIcon.ShowBalloonTip("Hello World!", "This is my first balloon.", Me.TrayIcon.Icon)
+    Private Sub DisplayQuoteBalloon(q As Quote)
+        Dim balloon As QuoteBalloon = New QuoteBalloon(q)
+        TrayIcon.ShowCustomBalloon(balloon, PopupAnimation.Slide, Nothing)
     End Sub
 
-    Public Sub TestCustomBalloon()
-        Dim balloon As Balloon = New Balloon()
-        TrayIcon.ShowCustomBalloon(balloon, PopupAnimation.Slide, 4000)
+    Public Sub HideQuoteBalloon()
+        TrayIcon.CloseBalloon()
     End Sub
 
 #End Region
@@ -87,18 +102,34 @@ Class Application
         End If
     End Sub
 
-    Private Sub SchedulerEventTriggered()
-        If MyMainWindow IsNot Nothing AndAlso MyMainWindow.IsLoaded Then
-            MyMainWindow.LoadRandomQuote()
-        Else
-            ShowMainWindow()
+    Public Sub InitializeSchedulerInTestMode()
+        ' initialize scheduler to run every 20 seconds
+        Dim schedule As New WisemanSchedule()
+        schedule.ScheduleType = WisemanScheduleTypeEnum.Periodically
+        schedule.ScheduleDays = New SchedulerAllowedDays(0)
+        schedule.ScheduleTime = New DateTime(2017, 1, 1, 0, 0, 20)
+        InitializeScheduler(schedule)
+    End Sub
+
+    Public Sub StopScheduler()
+        If TypeOf (Scheduler) Is WisemanScheduler Then
+            Scheduler.StopScheduler()
         End If
     End Sub
 
-    Public Delegate Sub NextPrimeDelegate()
+    Private Async Sub LoadRandomQuote()
+        CurrentQuote = Await Client.FetchRandomQuote()
+        DisplayQuoteBalloon(CurrentQuote)
+    End Sub
+
+    Private Sub SchedulerEventTriggered()
+        LoadRandomQuote()
+    End Sub
+
+    Public Delegate Sub SchedulerEventTriggeredDelegate()
 
     Private Sub OnSchedulerEvent() Handles Scheduler.ItIsTime
-        Dispatcher.BeginInvoke(New NextPrimeDelegate(AddressOf SchedulerEventTriggered), DispatcherPriority.ContextIdle, Nothing)
+        Dispatcher.BeginInvoke(New SchedulerEventTriggeredDelegate(AddressOf SchedulerEventTriggered), DispatcherPriority.ContextIdle, Nothing)
     End Sub
 
 #End Region
@@ -109,6 +140,9 @@ Class Application
         LoadSettings()
         LoadTheme(Settings.ThemeName)
         TrayIcon = FindResource("NotifyIcon")
+        Client = New WisemanClient()
+        LoadRandomQuote()
+        InitializeSchedulerInTestMode()
     End Sub
 
     Private Sub App_DispatcherUnhandledException(sender As Object, e As DispatcherUnhandledExceptionEventArgs) Handles Me.DispatcherUnhandledException

@@ -2,7 +2,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:WisemanWindowsClient">
 
-    <Color x:Key="BasicBackgroundColor">#FFF0F0F0</Color>
+    <Color x:Key="BasicBackgroundColor">#FFFFFFFF</Color>
     <Color x:Key="BasicForegroundColor">#FF232323</Color>
     <Color x:Key="BasicBorderColor">#FF808080</Color>
 
