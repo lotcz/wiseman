@@ -26,7 +26,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
+    <DebugType>None</DebugType>
     <DebugSymbols>false</DebugSymbols>
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
@@ -99,7 +99,7 @@
     <Resource Include="Images\Icon.ico" />
     <Compile Include="NotifyIconViewModel.vb" />
     <Content Include="Themes\White.xaml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
     <Page Include="Controls\QuoteBalloon.xaml">
@@ -130,7 +130,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Content Include="Themes\Black.xaml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
     <Page Include="Windows\SettingsWindow.xaml">
@@ -143,7 +143,7 @@
     </Page>
     <Content Include="Themes\Blue.xaml">
       <SubType>Designer</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>

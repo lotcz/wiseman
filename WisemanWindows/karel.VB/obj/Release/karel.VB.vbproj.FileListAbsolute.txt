@@ -1,0 +1,8 @@
+C:\develop\wiseman\WisemanWindows\karel.VB\bin\Release\karel.VB.dll
+C:\develop\wiseman\WisemanWindows\karel.VB\bin\Release\karel.VB.pdb
+C:\develop\wiseman\WisemanWindows\karel.VB\bin\Release\karel.VB.xml
+C:\develop\wiseman\WisemanWindows\karel.VB\obj\Release\karel.VB.Resources.resources
+C:\develop\wiseman\WisemanWindows\karel.VB\obj\Release\karel.VB.vbproj.GenerateResource.Cache
+C:\develop\wiseman\WisemanWindows\karel.VB\obj\Release\karel.VB.dll
+C:\develop\wiseman\WisemanWindows\karel.VB\obj\Release\karel.VB.xml
+C:\develop\wiseman\WisemanWindows\karel.VB\obj\Release\karel.VB.pdb

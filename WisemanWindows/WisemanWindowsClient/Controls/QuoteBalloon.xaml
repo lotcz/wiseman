@@ -5,8 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WisemanWindowsClient"
              mc:Ignorable="d" 
-             Height="300" Width="300">
-    <Label VerticalAlignment="Stretch" HorizontalAlignment="Stretch" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
+             Height="300" Width="300" >
+    <Border Padding="{DynamicResource DefaultPadding}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
         <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
@@ -22,5 +22,5 @@
                 <Button Content="Více..." Style="{DynamicResource SmallMenuButtonStyle}" Click="Button_Click_1" />
             </StackPanel>
         </Grid>        
-    </Label>
+    </Border>
 </UserControl>

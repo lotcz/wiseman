@@ -12,8 +12,13 @@ Class MainWindow
 
     Public Async Sub LoadRandomQuote()
         LoadingAnimControl.Show()
-        Dim q As Quote = Await WisemanApplication.Client.FetchRandomQuote()
-        DisplayQuote(q)
+        Try
+            Dim q As Quote = Await WisemanApplication.Client.FetchRandomQuote()
+            DisplayQuote(q)
+        Catch e As Exception
+            quoteTextBlock.Text = "Error"
+            CurrentQuote = Nothing
+        End Try
         LoadingAnimControl.Hide()
     End Sub
 

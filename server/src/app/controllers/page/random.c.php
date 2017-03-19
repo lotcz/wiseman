@@ -11,6 +11,6 @@
 	$q->save();
 		
 	//!!!!
-	//sleep(3);
+	sleep(3);
 	
 	$this->setData('quote', $quote->data);

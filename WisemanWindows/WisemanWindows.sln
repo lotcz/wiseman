@@ -9,6 +9,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WisemanWindowsClient", "Wis
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "karel.VB", "karel.VB\karel.VB.vbproj", "{BFD24FA5-725C-4641-A821-6FF1E3D83254}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "CimrmanologInstaller", "CimrmanologInstaller\CimrmanologInstaller.vdproj", "{CF76592D-E8EE-4A79-81A4-11FD092609BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,8 @@ Global
 		{BFD24FA5-725C-4641-A821-6FF1E3D83254}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFD24FA5-725C-4641-A821-6FF1E3D83254}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFD24FA5-725C-4641-A821-6FF1E3D83254}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF76592D-E8EE-4A79-81A4-11FD092609BE}.Debug|Any CPU.ActiveCfg = Debug
+		{CF76592D-E8EE-4A79-81A4-11FD092609BE}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

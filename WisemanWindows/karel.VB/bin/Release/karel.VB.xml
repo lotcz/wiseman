@@ -1,0 +1,64 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+karel.VB
+</name>
+</assembly>
+<members>
+<member name="T:karel.VB.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:karel.VB.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:karel.VB.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:karel.VB.StringHelper.StringOfCharacter(System.Char,System.Int32)">
+ <summary>
+ Return a string of fised length filled with one single character.
+ </summary>
+ <param name="Chr">character to use</param>
+ <param name="Length">length of returned string</param>
+ <remarks>If you call for example StringOfCharacter("0",4) returned value will be "0000".</remarks>
+</member>
+<member name="M:karel.VB.StringHelper.Substring(System.String,System.Int32,System.Int32)">
+ <summary>
+ Returns portion of specified string. Always returns string value even if index and length are out of bounds or input text is Nothing
+ </summary>
+ <param name="text"></param>
+ <param name="index">zero-based position of your substring's first character</param>
+ <param name="length"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:karel.VB.StringHelper.FixedLength(System.String,System.Int32,karel.VB.StringHelper.StringAlignment,System.Char)">
+ <summary>
+ Returns string of defined length. Longer string is truncated, shorter string is added leading or trailing characters depending on defined Alignment.
+ </summary>
+ <param name="Text">String that you want to process.</param>
+ <param name="Length">Length you want the string to be formatted to</param>
+ <param name="Alignment">If Left, trailing characters are put to the end of the string. If Right, leading characters are put to beginning of the string.</param>
+ <param name="FillingChar">Character to fill remaining space with.</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:karel.VB.StringHelper.FixedLengthNumber(System.Object,System.Int32)">
+ <summary>
+ Returns string of fixed length containing number prefixed with zeros to fit desired size. Decimal separators are removed.
+ </summary>
+ <param name="Number"></param>
+ <param name="Length"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

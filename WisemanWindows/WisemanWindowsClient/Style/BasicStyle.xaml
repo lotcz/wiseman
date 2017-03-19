@@ -21,12 +21,18 @@
 
     <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BasicFrameworkElementStyle}" >
     </Style>
+
+    <Style TargetType="{x:Type Border}" BasedOn="{StaticResource BasicFrameworkElementStyle}">
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="BorderThickness" Value="{StaticResource DefaultBorderThickness}" />
+        <Setter Property="Background" Value="{DynamicResource BackgroundBrush}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}"/>
+    </Style>
     
     <Style TargetType="{x:Type Control}" x:Key="BasicControlStyle" BasedOn="{StaticResource BasicFrameworkElementStyle}">
         <Setter Property="Background" Value="{DynamicResource BackgroundBrush}"/>
         <Setter Property="Foreground" Value="{DynamicResource ForegroundBrush}"/>
-        <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}"/>        
-        <Setter Property="Padding" Value="{DynamicResource DefaultPadding}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}"/>
         <Setter Property="FontSize" Value="{DynamicResource DefaultFontSize}"/>
     </Style>
    
@@ -42,12 +48,6 @@
         <Setter Property="Icon" Value="/Images/Icon.ico"/>
         <Setter Property="BorderThickness" Value="{DynamicResource DefaultBorderThickness}"/>
     </Style>
-
-    <Style TargetType="{x:Type Border}" BasedOn="{StaticResource BasicFrameworkElementStyle}">
-        <Setter Property="SnapsToDevicePixels" Value="True" />
-        <Setter Property="BorderThickness" Value="{StaticResource DefaultBorderThickness}" />
-        <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}"/>
-    </Style>    
     
     <Style TargetType="{x:Type Button}" x:Key="BasicButtonStyle" BasedOn="{StaticResource BasicControlStyle}">
         <Setter Property="FontWeight" Value="Regular"/>

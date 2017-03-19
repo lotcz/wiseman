@@ -4,6 +4,6 @@
 Public Class WisemanClientSettings
     Inherits WisemanSettings
 
-    Public ThemeName As String = "Blue"
+    Public ThemeName As String = "White"
 
 End Class

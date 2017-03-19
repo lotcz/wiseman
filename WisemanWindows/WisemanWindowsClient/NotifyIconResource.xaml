@@ -16,7 +16,7 @@
     <!-- the application's NotifyIcon - started from App.xaml.cs. Declares its own view model. -->
     <tb:TaskbarIcon x:Key="NotifyIcon"
                     IconSource="Images/Icon.ico"
-                    ToolTipText="Double-click for window, right-click for menu"
+                    ToolTipText="Cimrmanolog - znalec hlášek Járy Cimrmana"
                     DoubleClickCommand="{Binding ShowCommand}"
                     ContextMenu="{StaticResource SysTrayMenu}">
 

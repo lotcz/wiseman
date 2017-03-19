@@ -27,7 +27,7 @@ Class Application
     Public Settings As WisemanClientSettings
 
     Public Sub LoadSettings()
-        Dim fileName As String = String.Format("{0}\wiseman.settings", Environment.CurrentDirectory)
+        Dim fileName As String = String.Format("{0}\wiseman.settings", Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData))
         If File.Exists(fileName) Then
             Settings = WisemanClientSettings.LoadFromFile(fileName)
         Else
@@ -49,7 +49,8 @@ Class Application
     Public Sub LoadTheme(themeName As String)
         Dim fileName As String = String.Format("{0}\Themes\{1}.xaml", Environment.CurrentDirectory, themeName)
         If File.Exists(fileName) Then
-            Using fs As FileStream = New FileStream(fileName, FileMode.Open)
+            'Using fs As FileStream = New FileStream(fileName, FileMode.Open)
+            Using fs As FileStream = File.OpenRead(fileName)
                 If _ThemeDictionary IsNot Nothing Then
                     Resources.MergedDictionaries.Remove(_ThemeDictionary)
                 End If
@@ -77,6 +78,13 @@ Class Application
             MyMainWindow.Show()
         End If
         HideQuoteBalloon()
+    End Sub
+
+    Public Sub HideMainWindow()
+        If TypeOf MyMainWindow Is WisemanWindowsClient.MainWindow AndAlso MyMainWindow.IsLoaded Then
+            MyMainWindow.Close()
+        End If
+        Me.MainWindow = Nothing
     End Sub
 
     Private Sub DisplayQuoteBalloon(q As Quote)
@@ -118,8 +126,12 @@ Class Application
     End Sub
 
     Private Async Sub LoadRandomQuote()
-        CurrentQuote = Await Client.FetchRandomQuote()
-        DisplayQuoteBalloon(CurrentQuote)
+        Try
+            CurrentQuote = Await Client.FetchRandomQuote()
+            DisplayQuoteBalloon(CurrentQuote)
+        Catch e As Exception
+            CurrentQuote = Nothing
+        End Try
     End Sub
 
     Private Sub SchedulerEventTriggered()
@@ -150,7 +162,9 @@ Class Application
     End Sub
 
     Private Sub App_Exit() Handles Me.Exit
+        HideMainWindow()
         SaveSettings()
+        HideQuoteBalloon()
         TrayIcon.Dispose()
     End Sub
 
