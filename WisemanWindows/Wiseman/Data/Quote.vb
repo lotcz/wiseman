@@ -1,6 +1,4 @@
-﻿Imports karel.JSON
-
-Public Class Quote
+﻿Public Class Quote
 
     Public Property Text As String
 

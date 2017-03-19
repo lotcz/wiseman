@@ -56,6 +56,7 @@
     <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
+    <Import Include="karel.VB" />
     <Import Include="Microsoft.VisualBasic" />
     <Import Include="System" />
     <Import Include="System.Collections" />
@@ -107,9 +108,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\karel.JSON\karel.JSON.vbproj">
+    <ProjectReference Include="..\karel.VB\karel.VB.vbproj">
       <Project>{bfd24fa5-725c-4641-a821-6ff1e3d83254}</Project>
-      <Name>karel.JSON</Name>
+      <Name>karel.VB</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

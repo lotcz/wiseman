@@ -2,10 +2,13 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:WisemanWindowsClient"
-    StartupUri="MainWindow.xaml">
+ShutdownMode="OnExplicitShutdown" >
     <Application.Resources>
-
-        <ResourceDictionary Source="/Style/BasicStyle.xaml" />
-
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/NotifyIconResource.xaml" />
+                <ResourceDictionary Source="/Style/BasicStyle.xaml" />                
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

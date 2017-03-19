@@ -14,11 +14,23 @@
         End If
     End Sub
 
-    Private Sub Window_Loaded(sender As Object, e As RoutedEventArgs)
+    Private Sub Window_Loaded(sender As Object, e As RoutedEventArgs) Handles Me.Loaded
         Dim radio As RadioButton = ThemeSelectionButtons.FindName(String.Format("{0}ThemeButton", WisemanApplication.Settings.ThemeName))
         If TypeOf (radio) Is RadioButton Then
             radio.IsChecked = True
         End If
+    End Sub
+
+    Private Sub CloseButton_Click(sender As Object, e As RoutedEventArgs) Handles CloseButton.Click
+        Me.Close()
+    End Sub
+
+    Private Sub HeaderControl_OnDragRequested() Handles HeaderControl.OnDragMoveRequested
+        Me.DragMove()
+    End Sub
+
+    Private Sub HeaderControl_OnCloseRequested() Handles HeaderControl.OnCloseRequested
+        Me.Close()
     End Sub
 
 End Class

@@ -1,0 +1,8 @@
+C:\develop\wiseman\WisemanWindows\karel.JSON\bin\Debug\karel.JSON.dll
+C:\develop\wiseman\WisemanWindows\karel.JSON\bin\Debug\karel.JSON.pdb
+C:\develop\wiseman\WisemanWindows\karel.JSON\bin\Debug\karel.JSON.xml
+C:\develop\wiseman\WisemanWindows\karel.JSON\obj\Debug\karel.JSON.Resources.resources
+C:\develop\wiseman\WisemanWindows\karel.JSON\obj\Debug\karel.JSON.vbproj.GenerateResource.Cache
+C:\develop\wiseman\WisemanWindows\karel.JSON\obj\Debug\karel.JSON.dll
+C:\develop\wiseman\WisemanWindows\karel.JSON\obj\Debug\karel.JSON.xml
+C:\develop\wiseman\WisemanWindows\karel.JSON\obj\Debug\karel.JSON.pdb

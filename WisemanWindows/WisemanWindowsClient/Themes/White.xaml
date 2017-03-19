@@ -2,7 +2,24 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:WisemanWindowsClient">
 
-    <SolidColorBrush x:Key="BackgroundBrushColor" Color="#FFFFFFFF"/>
-    <SolidColorBrush x:Key="ForegroundBrushColor" Color="#FF000000"/>
+    <Color x:Key="BasicBackgroundColor">#FFF0F0F0</Color>
+    <Color x:Key="BasicForegroundColor">#FF232323</Color>
+    <Color x:Key="BasicBorderColor">#FF808080</Color>
+
+    <SolidColorBrush x:Key="BackgroundBrush" Color="{DynamicResource BasicBackgroundColor}"/>
+    <SolidColorBrush x:Key="ForegroundBrush" Color="{DynamicResource BasicForegroundColor}"/>
+    <SolidColorBrush x:Key="BorderBrush" Color="{DynamicResource BasicBorderColor}"/>
+
+    <Color x:Key="BasicButtonColor">#FF005bae</Color>
+    <Color x:Key="ButtonHoverColor">#FF106bbe</Color>
+    <Color x:Key="ButtonTextColor">#FFFFFFFF</Color>
     
+    <SolidColorBrush x:Key="ButtonBackgroundBrush" Color="{DynamicResource BasicButtonColor}"/>
+    <SolidColorBrush x:Key="ButtonForegroundBrush" Color="{DynamicResource ButtonTextColor}"/>
+    <SolidColorBrush x:Key="ButtonBorderBrush" Color="{DynamicResource BasicButtonColor}"/>
+
+    <SolidColorBrush x:Key="ButtonHoverBackgroundBrush" Color="{DynamicResource ButtonHoverColor}"/>
+    <SolidColorBrush x:Key="ButtonHoverForegroundBrush" Color="{DynamicResource ButtonTextColor}"/>
+    <SolidColorBrush x:Key="ButtonHoverBorderBrush" Color="{DynamicResource ButtonHoverColor}"/>
+
 </ResourceDictionary>

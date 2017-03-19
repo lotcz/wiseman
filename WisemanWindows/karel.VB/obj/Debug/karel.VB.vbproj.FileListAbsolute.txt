@@ -1,0 +1,9 @@
+C:\develop\wiseman\WisemanWindows\karel.VB\bin\Debug\karel.VB.dll
+C:\develop\wiseman\WisemanWindows\karel.VB\bin\Debug\karel.VB.pdb
+C:\develop\wiseman\WisemanWindows\karel.VB\bin\Debug\karel.VB.xml
+C:\develop\wiseman\WisemanWindows\karel.VB\obj\Debug\karel.VB.Resources.resources
+C:\develop\wiseman\WisemanWindows\karel.VB\obj\Debug\karel.VB.vbproj.GenerateResource.Cache
+C:\develop\wiseman\WisemanWindows\karel.VB\obj\Debug\karel.VB.dll
+C:\develop\wiseman\WisemanWindows\karel.VB\obj\Debug\karel.VB.xml
+C:\develop\wiseman\WisemanWindows\karel.VB\obj\Debug\karel.VB.pdb
+C:\develop\wiseman\WisemanWindows\karel.VB\obj\Debug\karel.VB.vbprojResolveAssemblyReference.cache

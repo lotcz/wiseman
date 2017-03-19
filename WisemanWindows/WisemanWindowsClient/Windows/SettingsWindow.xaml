@@ -4,10 +4,18 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WisemanWindowsClient"
-        mc:Ignorable="d" Style="{StaticResource BasicWindowStyle}"
-        Title="SettingsWindow" Height="300" Width="300" Loaded="Window_Loaded">
+        mc:Ignorable="d" Style="{StaticResource BasicWindowStyle}" Icon="/Images/Icon.ico"
+        Title="Nastavení" Height="300" Width="300" >
     <Grid>
-        <StackPanel Name="ThemeSelectionButtons" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <local:FakeHeaderControl x:Name="HeaderControl" />
+        
+        <StackPanel Grid.Row="1" Name="ThemeSelectionButtons" VerticalAlignment="Center" HorizontalAlignment="Center">
             <RadioButton Name="WhiteThemeButton" Tag="White" >
                 <RadioButton.Content>
                     <TextBlock Text="White" />
@@ -16,5 +24,7 @@
             <RadioButton Content="Black" Tag="Black" Name="BlackThemeButton" />
             <RadioButton Content="Blue" Tag="Blue" Name="BlueThemeButton" />
         </StackPanel>
+
+        <Button Style="{StaticResource BigButtonStyle}" Margin="10" Grid.Row="2" x:Name="CloseButton" Content="Zavřít" />
     </Grid>
 </Window>
