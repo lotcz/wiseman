@@ -58,12 +58,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A661BE6CECBF6993D65D0D69E2898164"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_211680CC482846D3B63F00F241749172"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -85,6 +79,12 @@
         "OwnerKey" = "8:_5599915C8FE382A74AD11DAA7F5BF6B5"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_A661BE6CECBF6993D65D0D69E2898164"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -103,6 +103,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -119,12 +135,56 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                }
+            }
         }
     }
     "Deployable"
     {
         "CustomAction"
         {
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_7A8706F01E774BF98DE2B1556518BE92"
+            {
+            "Name" = "8:Primary output from WisemanWindowsClient (Release Any CPU)"
+            "Condition" = "8:"
+            "Object" = "8:_211680CC482846D3B63F00F241749172"
+            "FileType" = "3:2"
+            "InstallAction" = "3:1"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_EB56998E_1E5E_4112_A081_89D2F4D62B57"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_A47DD5CE1B3443AFBBE8191940D97D62"
+            {
+            "Name" = "8:Primary output from WisemanWindowsClient (Release Any CPU)"
+            "Condition" = "8:"
+            "Object" = "8:_211680CC482846D3B63F00F241749172"
+            "FileType" = "3:2"
+            "InstallAction" = "3:2"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_2E228D1E_B095_4DFC_A6FA_548800FC125F"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
         }
         "DefaultFeature"
         {
@@ -140,7 +200,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "FrameworkVersion" = "8:.NETFramework,Version=v4.5"
+                "FrameworkVersion" = "8:.NETFramework,Version=v4.5.2"
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=395269"
                 }
@@ -298,17 +358,6 @@
             "Property" = "8:ProgramMenuFolder"
                 "Folders"
                 {
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_7629B3FDF691458EA866E93E9D31C20F"
-                    {
-                    "Name" = "8:Cimrmanolog"
-                    "AlwaysCreate" = "11:TRUE"
-                    "Condition" = "8:"
-                    "Transitive" = "11:FALSE"
-                    "Property" = "8:_52DA4605DDDA4CBB83BFCF84E3E70253"
-                        "Folders"
-                        {
-                        }
-                    }
                 }
             }
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_1C6C0730E4A0413F988B7E6C444748CC"
@@ -319,6 +368,17 @@
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Property" = "8:TARGETDIR"
+                "Folders"
+                {
+                }
+            }
+            "{1525181F-901A-416C-8A58-119130FE478E}:_27CA972C771D4A99A7A14A0C80E8002A"
+            {
+            "Name" = "8:#1928"
+            "AlwaysCreate" = "11:FALSE"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Property" = "8:StartupFolder"
                 "Folders"
                 {
                 }
@@ -340,7 +400,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Cimrmanolog"
         "ProductCode" = "8:{5213B55A-D0E8-46B1-83CA-A510535C8055}"
-        "PackageCode" = "8:{23DABE1B-7EF2-4975-908B-37B68C6239FF}"
+        "PackageCode" = "8:{128B68B2-1AB6-4DBD-B97A-55526D8BE92F}"
         "UpgradeCode" = "8:{E5CDC73D-8D18-43DD-BA6A-E1F42FD03B2E}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -357,8 +417,8 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:"
-        "ARPIconIndex" = "3:0"
+        "ARPPRODUCTICON" = "8:_211680CC482846D3B63F00F241749172"
+        "ARPIconIndex" = "3:32512"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
         "TargetPlatform" = "3:0"
@@ -469,9 +529,23 @@
             "IconIndex" = "3:32512"
             "Transitive" = "11:FALSE"
             "Target" = "8:_211680CC482846D3B63F00F241749172"
-            "Folder" = "8:_7629B3FDF691458EA866E93E9D31C20F"
+            "Folder" = "8:_1B18B3ACE2F84452A19E871FE64FE80A"
             "WorkingFolder" = "8:_1C6C0730E4A0413F988B7E6C444748CC"
             "Icon" = "8:_211680CC482846D3B63F00F241749172"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_4C5550E15C82488E99B16AB1F6ED0A0F"
+            {
+            "Name" = "8:Cimrmanolog"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_211680CC482846D3B63F00F241749172"
+            "Folder" = "8:_27CA972C771D4A99A7A14A0C80E8002A"
+            "WorkingFolder" = "8:_1C6C0730E4A0413F988B7E6C444748CC"
+            "Icon" = "8:"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_5B211A7A0E724FE8B027AF9670A1EAA3"

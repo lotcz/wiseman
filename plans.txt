@@ -13,13 +13,16 @@ Contexts and app types
 Windows app release 1
 ---------------------
 	
-	- prevent multiple program instances
-	- add uninstaller, allow to install new version over the old one
-	- create settings editor and include specific settings file during install
-	- separate wiseman.settings from user.settings
+	- remember last display time
+	- debug scheduler
 	- create Cimrman theme	
-
+	- prevent multiple program instances
+	- allow to install new version over the old one	
+	- separate wiseman.settings from user.settings
+	- if user.settings is not present, show welcome screen and let user create it
+	
 	next releases:	
+	- create settings editor and include specific settings file during install
 	- improve themes
 	- allow configuration of regular quote display (select days, time)
 		
@@ -27,6 +30,8 @@ Wiseman server version 1
 ------------------------
 
 	- improve look of admin area
+	- add auto-complete
+	- allow automatic creation of author and origin
 	- create v1 of wiseman API (used by Window app release 1)
 	- create import function for quotes
 	- create at least 100 quotes in the first context

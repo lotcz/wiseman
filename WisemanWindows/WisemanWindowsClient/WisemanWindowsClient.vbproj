@@ -59,6 +59,7 @@
       <HintPath>..\packages\Hardcodet.NotifyIcon.Wpf.1.0.8\lib\net451\Hardcodet.Wpf.TaskbarNotification.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -88,6 +89,12 @@
     </Compile>
     <Compile Include="Controls\WaitAnimationControl.xaml.vb">
       <DependentUpon>WaitAnimationControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomInstaller.Designer.vb">
+      <DependentUpon>CustomInstaller.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomInstaller.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Scheduler\WisemanSchedule.vb" />
     <Compile Include="Scheduler\SchedulerAllowedDays.vb" />

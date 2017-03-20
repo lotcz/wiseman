@@ -15,6 +15,10 @@
 			[
 				'name' => 'language_name',
 				'label' => 'Language'			
-			]
+			],
+			[
+				'name' => 'context_total_quotes',
+				'label' => 'Quotes'
+			],
 		]
 	);
