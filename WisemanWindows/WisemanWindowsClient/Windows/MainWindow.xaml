@@ -44,7 +44,7 @@
             
         </Grid>
         
-        <TextBlock x:Name="quoteTextBlock" Grid.Row="2" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="32" />
+        <TextBlock x:Name="quoteTextBlock" Grid.Row="2" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Center" HorizontalAlignment="Center" />
 
         <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
             <Label>

@@ -13,11 +13,11 @@ Contexts and app types
 Windows app release 1
 ---------------------
 	
-	- display quotes as balloons which have button that allow to open main window
-	- balloon only disappear on user interaction
-	- create Cimrman theme
-
-	- add installer and uninstaller
+	- prevent multiple program instances
+	- add uninstaller, allow to install new version over the old one
+	- create settings editor and include specific settings file during install
+	- separate wiseman.settings from user.settings
+	- create Cimrman theme	
 
 	next releases:	
 	- improve themes

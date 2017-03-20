@@ -31,7 +31,7 @@
                 position += 1
                 Return ParseString()
             Else
-                Return ParseString()
+                Return ParseNumber()
             End If
         Else
             Return Nothing
@@ -93,11 +93,33 @@
             Do While jsonStr.Length > position
                 chr = jsonStr(position)
                 position += 1
-                If chr = "'" Or chr = """" Or chr = "," Then
+                If chr = "'" Or chr = """" Then
                     jsonObj.Value = str
                     Return jsonObj
                 ElseIf chr = "\" Then
                     str += ParseEscaped()
+                Else
+                    str += chr
+                End If
+            Loop
+        Else
+            Return Nothing
+        End If
+    End Function
+
+    Private Function ParseNumber() As JSONObject
+        If jsonStr IsNot Nothing AndAlso jsonStr.Length > position Then
+            Dim jsonObj As New JSONObject()
+            jsonObj.IsString = True
+            Dim str As String = String.Empty
+            Dim chr As Char
+
+            Do While jsonStr.Length > position
+                chr = jsonStr(position)
+                position += 1
+                If chr = " " Or chr = "," Then
+                    jsonObj.Value = str
+                    Return jsonObj
                 Else
                     str += chr
                 End If

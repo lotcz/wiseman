@@ -115,7 +115,7 @@ Class Application
         Dim schedule As New WisemanSchedule()
         schedule.ScheduleType = WisemanScheduleTypeEnum.Periodically
         schedule.ScheduleDays = New SchedulerAllowedDays(0)
-        schedule.ScheduleTime = New DateTime(2017, 1, 1, 0, 0, 20)
+        schedule.ScheduleTime = New DateTime(2017, 1, 1, 1, 0, 0)
         InitializeScheduler(schedule)
     End Sub
 
