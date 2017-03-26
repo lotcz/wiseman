@@ -67,7 +67,6 @@ Class Application
 #Region "Public app methods"
 
     Public Sub ShowMainWindow()
-        StopScheduler()
         If TypeOf MyMainWindow Is WisemanWindowsClient.MainWindow AndAlso MyMainWindow.IsLoaded Then
             MyMainWindow.BringIntoView()
         Else
@@ -102,21 +101,17 @@ Class Application
 
     Public WithEvents Scheduler As WisemanScheduler
 
-    Public Sub InitializeScheduler(schedule As WisemanSchedule)
+    Public Sub InitializeScheduler()
+        ' base schedule on user settings
+        Dim schedule As New WisemanSchedule()
+        schedule.ScheduleType = WisemanScheduleTypeEnum.Periodically
+        schedule.ScheduleDays = New SchedulerAllowedDays(0)
+        schedule.ScheduleTime = New DateTime(2017, 1, 1, 0, 0, 20)
         If TypeOf (Scheduler) Is WisemanScheduler Then
             Scheduler.SchedulingChanged(schedule)
         Else
             Scheduler = New WisemanScheduler(schedule)
         End If
-    End Sub
-
-    Public Sub InitializeSchedulerInTestMode()
-        ' initialize scheduler to run every 20 seconds
-        Dim schedule As New WisemanSchedule()
-        schedule.ScheduleType = WisemanScheduleTypeEnum.Periodically
-        schedule.ScheduleDays = New SchedulerAllowedDays(0)
-        schedule.ScheduleTime = New DateTime(2017, 1, 1, 1, 0, 0)
-        InitializeScheduler(schedule)
     End Sub
 
     Public Sub StopScheduler()
@@ -154,7 +149,7 @@ Class Application
         TrayIcon = FindResource("NotifyIcon")
         Client = New WisemanClient()
         LoadRandomQuote()
-        InitializeSchedulerInTestMode()
+        InitializeScheduler()
     End Sub
 
     Private Sub App_DispatcherUnhandledException(sender As Object, e As DispatcherUnhandledExceptionEventArgs) Handles Me.DispatcherUnhandledException

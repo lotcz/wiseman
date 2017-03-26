@@ -26,13 +26,11 @@ Windows app release 1
 	- improve themes
 	- allow configuration of regular quote display (select days, time)
 		
-Wiseman server version 1
+Wiseman server version 2
 ------------------------
 
-	- improve look of admin area
 	- add auto-complete
 	- allow automatic creation of author and origin
-	- create v1 of wiseman API (used by Window app release 1)
 	- create import function for quotes
 	- create at least 100 quotes in the first context
 	

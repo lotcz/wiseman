@@ -6,3 +6,4 @@ C:\develop\wiseman\WisemanWindows\karel.VB\obj\Release\karel.VB.vbproj.GenerateR
 C:\develop\wiseman\WisemanWindows\karel.VB\obj\Release\karel.VB.dll
 C:\develop\wiseman\WisemanWindows\karel.VB\obj\Release\karel.VB.xml
 C:\develop\wiseman\WisemanWindows\karel.VB\obj\Release\karel.VB.pdb
+C:\develop\wiseman\WisemanWindows\karel.VB\obj\Release\karel.VB.vbprojResolveAssemblyReference.cache

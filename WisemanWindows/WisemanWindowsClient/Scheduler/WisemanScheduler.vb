@@ -10,12 +10,12 @@ Public Class WisemanScheduler
 
     Public Sub New(defaultSchedule As WisemanSchedule)
         Schedule = defaultSchedule
-        Reload()
+        ScheduleNextEvent()
     End Sub
 
     Public Sub SchedulingChanged(newSchedule As WisemanSchedule)
         Schedule = newSchedule
-        Reload()
+        ScheduleNextEvent()
     End Sub
 
     Public Sub StopScheduler()
@@ -27,11 +27,6 @@ Public Class WisemanScheduler
             SchedulerTimer.Stop()
         End If
         SchedulerTimer = Nothing
-    End Sub
-
-    Private Sub Reload()
-        StopTimer()
-        ScheduleNextEvent()
     End Sub
 
     Private Sub ScheduleNextEvent()
@@ -65,7 +60,7 @@ Public Class WisemanScheduler
 
         RaiseEvent ItIsTime()
 
-        Reload()
+        ScheduleNextEvent()
     End Sub
 
 End Class

@@ -30,7 +30,6 @@ Class MainWindow
     End Sub
 
     Public Sub CloseWindow()
-        WisemanApplication.InitializeSchedulerInTestMode()
         Me.Close()
     End Sub
 
