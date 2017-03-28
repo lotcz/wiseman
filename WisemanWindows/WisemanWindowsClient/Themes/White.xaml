@@ -22,4 +22,6 @@
     <SolidColorBrush x:Key="ButtonHoverForegroundBrush" Color="{DynamicResource ButtonTextColor}"/>
     <SolidColorBrush x:Key="ButtonHoverBorderBrush" Color="{DynamicResource ButtonHoverColor}"/>
 
+    <SolidColorBrush x:Key="LinkButtonForegroundBrush" Color="{DynamicResource BasicButtonColor}"/>
+    
 </ResourceDictionary>

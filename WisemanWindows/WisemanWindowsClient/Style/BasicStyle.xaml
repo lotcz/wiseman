@@ -38,6 +38,12 @@
    
     <Style TargetType="{x:Type Label}" BasedOn="{StaticResource BasicControlStyle}">
     </Style>
+
+    <Style TargetType="{x:Type Label}" x:Key="LinkButtonStyle" BasedOn="{StaticResource BasicControlStyle}">
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="{DynamicResource LinkButtonForegroundBrush}" />
+    </Style>
     
     <Style TargetType="{x:Type RadioButton}" BasedOn="{StaticResource BasicControlStyle}">
     </Style>

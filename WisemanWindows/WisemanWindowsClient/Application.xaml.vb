@@ -102,15 +102,28 @@ Class Application
     Public WithEvents Scheduler As WisemanScheduler
 
     Public Sub InitializeScheduler()
-        ' base schedule on user settings
-        Dim schedule As New WisemanSchedule()
-        schedule.ScheduleType = WisemanScheduleTypeEnum.Periodically
-        schedule.ScheduleDays = New SchedulerAllowedDays(0)
-        schedule.ScheduleTime = New DateTime(2017, 1, 1, 0, 0, 20)
-        If TypeOf (Scheduler) Is WisemanScheduler Then
-            Scheduler.SchedulingChanged(schedule)
+        If Settings.Schedule = WisemanSimpleSchedulesEnum.Never Then
+            StopScheduler()
         Else
-            Scheduler = New WisemanScheduler(schedule)
+            Dim schedule As New WisemanSchedule()
+            If Settings.Schedule = WisemanSimpleSchedulesEnum.Daily Then
+                schedule.ScheduleType = WisemanScheduleTypeEnum.AtCertainTime
+                schedule.ScheduleDays = New SchedulerAllowedDays(0)
+                'TO DO - base on last display time
+                schedule.ScheduleTime = New DateTime(2017, 1, 1, 10, 0, 0)
+            Else 'hourly
+                schedule.ScheduleType = WisemanScheduleTypeEnum.Periodically
+                schedule.ScheduleDays = New SchedulerAllowedDays(0)
+                schedule.ScheduleTime = New DateTime(2017, 1, 1, 0, 0, 20)
+            End If
+
+            schedule.ScheduleLastRun = Settings.LastDisplayTime
+
+            If TypeOf (Scheduler) Is WisemanScheduler Then
+                Scheduler.SchedulingChanged(schedule)
+            Else
+                Scheduler = New WisemanScheduler(schedule)
+            End If
         End If
     End Sub
 
@@ -130,6 +143,7 @@ Class Application
     End Sub
 
     Private Sub SchedulerEventTriggered()
+        Settings.LastDisplayTime = DateTime.Now
         LoadRandomQuote()
     End Sub
 

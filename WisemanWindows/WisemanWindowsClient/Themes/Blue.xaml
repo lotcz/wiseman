@@ -15,5 +15,7 @@
     <SolidColorBrush x:Key="ButtonHoverBackgroundBrush" Color="#FF3FA0F7"/>
     <SolidColorBrush x:Key="ButtonHoverForegroundBrush" Color="#FF161e3f"/>
     <SolidColorBrush x:Key="ButtonHoverBorderBrush" Color="#FFDE3FF7"/>
+
+    <SolidColorBrush x:Key="LinkButtonForegroundBrush" Color="#FFD0D0FF"/>
     
 </ResourceDictionary>

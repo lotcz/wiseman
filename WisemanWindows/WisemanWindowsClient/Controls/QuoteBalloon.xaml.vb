@@ -9,6 +9,8 @@
     Public Sub New(q As Quote)
         InitializeComponent()
         QuoteText.Text = q.Text
+        AuthorTextRun.Text = q.Author
+        OriginTextRun.Text = q.Origin
     End Sub
 
     Private Sub Button_Click(sender As Object, e As RoutedEventArgs)

@@ -25,8 +25,8 @@ Class MainWindow
     Public Sub DisplayQuote(q As Quote)
         CurrentQuote = q
         quoteTextBlock.Text = q.Text
-        AuthorTextBlock.Text = q.Author
-        SourceTextBlock.Text = q.Source
+        AuthorTextRun.Text = q.Author
+        OriginTextRun.Text = q.Origin
     End Sub
 
     Public Sub CloseWindow()
@@ -43,7 +43,7 @@ Class MainWindow
         End If
     End Sub
 
-    Private Sub SettingsButton_Click(sender As Object, e As RoutedEventArgs) Handles SettingsButton.Click
+    Private Sub SettingsButton_Click(sender As Object, e As RoutedEventArgs) Handles SettingsButton.MouseLeftButtonUp
         Dim window As New SettingsWindow()
         window.Owner = Me
         window.ShowDialog()

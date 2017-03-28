@@ -1,0 +1,19 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:WisemanWindowsClient">
+
+    <SolidColorBrush x:Key="BackgroundBrush" Color="#FF302314"/>
+    <SolidColorBrush x:Key="ForegroundBrush" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="BorderBrush" Color="#FFdab183"/>
+
+    <SolidColorBrush x:Key="ButtonBackgroundBrush" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="ButtonForegroundBrush" Color="#FF302314"/>
+    <SolidColorBrush x:Key="ButtonBorderBrush" Color="#FFFFFFFF"/>
+
+    <SolidColorBrush x:Key="ButtonHoverBackgroundBrush" Color="#FFdacfc2"/>
+    <SolidColorBrush x:Key="ButtonHoverForegroundBrush" Color="#FF302314"/>
+    <SolidColorBrush x:Key="ButtonHoverBorderBrush" Color="#FFdacfc2"/>
+
+    <SolidColorBrush x:Key="LinkButtonForegroundBrush" Color="#FFFFFFFF"/>
+    
+</ResourceDictionary>

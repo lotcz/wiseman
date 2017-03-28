@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WisemanWindowsClient"
-             mc:Ignorable="d" 
+             mc:Ignorable="d" Style="{DynamicResource BasicControlStyle}"
              Height="300" Width="300" >
     <Border Padding="{DynamicResource DefaultPadding}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
         <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
@@ -12,8 +12,21 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            
-            <TextBlock FontSize="{DynamicResource DefaultFontSize}" TextWrapping="WrapWithOverflow" Name="QuoteText" />
+
+            <StackPanel>
+
+                <TextBlock FontSize="{DynamicResource DefaultFontSize}" TextWrapping="WrapWithOverflow" Name="QuoteText" />
+
+                <TextBlock FontSize="12" Margin="0,10,0,0">
+                    <Run Text="-" />
+                    <Run x:Name="AuthorTextRun" />
+                </TextBlock>
+
+                <TextBlock FontSize="12">
+                    <Run Text="-" />
+                    <Run x:Name="OriginTextRun"  />
+                </TextBlock>
+            </StackPanel>            
             
             <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,10,0,0">
                 <Button Content="Zavřít" Style="{DynamicResource SmallMenuButtonStyle}" Click="Button_Click" HorizontalAlignment="Left" />

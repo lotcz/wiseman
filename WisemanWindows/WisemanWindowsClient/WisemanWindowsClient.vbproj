@@ -98,6 +98,7 @@
     </Compile>
     <Compile Include="Scheduler\WisemanSchedule.vb" />
     <Compile Include="Scheduler\SchedulerAllowedDays.vb" />
+    <Compile Include="Scheduler\WisemanSimpleSchedulesEnum.vb" />
     <Compile Include="Windows\SettingsWindow.xaml.vb">
       <DependentUpon>SettingsWindow.xaml</DependentUpon>
     </Compile>
@@ -124,6 +125,10 @@
     <Page Include="NotifyIconResource.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Content Include="Themes\Cimrman.xaml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Page Include="Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
