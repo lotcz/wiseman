@@ -16,7 +16,7 @@
         
         <local:FakeHeaderControl Title="{Binding Title,ElementName=SettingsWindowInstance}" x:Name="HeaderControl" />
 
-        <GroupBox Margin="0,10,0,0" Header="Vzhled" Grid.Row="1">
+        <GroupBox Margin="0,10,0,0" Header="Vzhled" Grid.Row="1" >
             <StackPanel Margin="10" Name="ThemeSelectionButtons" VerticalAlignment="Center" HorizontalAlignment="Left">
                 <RadioButton Content="Cimrman" Tag="Cimrman" Name="CimrmanThemeButton" />
                 <RadioButton Content="Bílá a modrá" Tag="White" Name="WhiteThemeButton" />
