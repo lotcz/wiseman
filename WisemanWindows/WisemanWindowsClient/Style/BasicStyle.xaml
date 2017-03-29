@@ -32,7 +32,6 @@
     <Style TargetType="{x:Type Control}" x:Key="BasicControlStyle" BasedOn="{StaticResource BasicFrameworkElementStyle}">
         <Setter Property="Background" Value="{DynamicResource BackgroundBrush}"/>
         <Setter Property="Foreground" Value="{DynamicResource ForegroundBrush}"/>
-        <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}"/>
         <Setter Property="FontSize" Value="{DynamicResource DefaultFontSize}"/>
     </Style>
    
@@ -52,6 +51,7 @@
         <Setter Property="WindowStyle" Value="None"/>
         <Setter Property="AllowsTransparency" Value="True"/>
         <Setter Property="Icon" Value="/Images/Icon.ico"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}"/>
         <Setter Property="BorderThickness" Value="{DynamicResource DefaultBorderThickness}"/>
     </Style>
     
@@ -60,7 +60,8 @@
         <Setter Property="Background" Value="{DynamicResource ButtonBackgroundBrush}"/>
         <Setter Property="Foreground" Value="{DynamicResource ButtonForegroundBrush}"/>
         <Setter Property="BorderBrush" Value="{DynamicResource ButtonBorderBrush}" />
-
+        <Setter Property="BorderThickness" Value="{DynamicResource DefaultBorderThickness}"/>
+        
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">

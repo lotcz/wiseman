@@ -7,7 +7,8 @@ ShutdownMode="OnExplicitShutdown" >
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/NotifyIconResource.xaml" />
-                <ResourceDictionary Source="/Style/BasicStyle.xaml" />                
+                <ResourceDictionary Source="/Style/BasicStyle.xaml" />
+                <ResourceDictionary Source="/Style/GroupBoxStyle.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

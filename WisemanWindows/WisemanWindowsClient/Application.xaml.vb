@@ -49,7 +49,6 @@ Class Application
     Public Sub LoadTheme(themeName As String)
         Dim fileName As String = String.Format("{0}\Themes\{1}.xaml", Environment.CurrentDirectory, themeName)
         If File.Exists(fileName) Then
-            'Using fs As FileStream = New FileStream(fileName, FileMode.Open)
             Using fs As FileStream = File.OpenRead(fileName)
                 If _ThemeDictionary IsNot Nothing Then
                     Resources.MergedDictionaries.Remove(_ThemeDictionary)
