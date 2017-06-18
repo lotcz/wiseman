@@ -11,12 +11,12 @@
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Border x:Name="radioButtonBorder" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="100" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="1,1,2,1" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                        <Border x:Name="radioButtonBorder" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="100" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="1,3,5,1" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
                             <Grid x:Name="markGrid" Margin="2">
                                 <Ellipse x:Name="optionMark" Fill="#FF212121" MinWidth="6" MinHeight="6" Opacity="0"/>
                             </Grid>
                         </Border>
-                        <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" Grid.Column="1" ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        <Label x:Name="contentPresenter" Content="{TemplateBinding Content}" Grid.Column="1" Focusable="False" HorizontalAlignment="Left" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="Center" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"/>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="HasContent" Value="True">
@@ -35,21 +35,7 @@
                             </Setter>
                             <Setter Property="Padding" Value="4,-1,0,0"/>
                         </Trigger>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" TargetName="radioButtonBorder" Value="#FFF3F9FF"/>
-                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#FF5593FF"/>
-                            <Setter Property="Fill" TargetName="optionMark" Value="#FF212121"/>
-                        </Trigger>
-                        <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="Background" TargetName="radioButtonBorder" Value="#FFE6E6E6"/>
-                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#FFBCBCBC"/>
-                            <Setter Property="Fill" TargetName="optionMark" Value="#FF707070"/>
-                        </Trigger>
-                        <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Background" TargetName="radioButtonBorder" Value="#FFD9ECFF"/>
-                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="#FF3C77DD"/>
-                            <Setter Property="Fill" TargetName="optionMark" Value="#FF212121"/>
-                        </Trigger>
+                       
                         <Trigger Property="IsChecked" Value="True">
                             <Setter Property="Opacity" TargetName="optionMark" Value="1"/>
                         </Trigger>
@@ -60,6 +46,7 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+       
     </Style>
 
 </ResourceDictionary>

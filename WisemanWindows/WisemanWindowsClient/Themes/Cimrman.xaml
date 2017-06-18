@@ -2,12 +2,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:WisemanWindowsClient">
 
-    <SolidColorBrush x:Key="BackgroundBrush" Color="#FF302314"/>
+    <SolidColorBrush x:Key="BackgroundBrush" Color="#FF1F170F"/>
     <SolidColorBrush x:Key="ForegroundBrush" Color="#FFFFFFFF"/>
-    <SolidColorBrush x:Key="BorderBrush" Color="#FFdab183"/>
+    <SolidColorBrush x:Key="BorderBrush" Color="#FF614C34"/>
 
     <SolidColorBrush x:Key="ButtonBackgroundBrush" Color="#FFFFFFFF"/>
-    <SolidColorBrush x:Key="ButtonForegroundBrush" Color="#FF302314"/>
+    <SolidColorBrush x:Key="ButtonForegroundBrush" Color="#FF2C251C"/>
     <SolidColorBrush x:Key="ButtonBorderBrush" Color="#FFFFFFFF"/>
 
     <SolidColorBrush x:Key="ButtonHoverBackgroundBrush" Color="#FFdacfc2"/>

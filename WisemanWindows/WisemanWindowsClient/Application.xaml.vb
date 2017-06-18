@@ -108,12 +108,15 @@ Class Application
             If Settings.Schedule = WisemanSimpleSchedulesEnum.Daily Then
                 schedule.ScheduleType = WisemanScheduleTypeEnum.AtCertainTime
                 schedule.ScheduleDays = New SchedulerAllowedDays(0)
-                'TO DO - base on last display time
-                schedule.ScheduleTime = New DateTime(2017, 1, 1, 10, 0, 0)
+                If Settings.LastDisplayTime.HasValue Then
+                    schedule.ScheduleTime = Settings.LastDisplayTime.Value.AddDays(1)
+                Else
+                    schedule.ScheduleTime = DateTime.Now
+                End If
             Else 'hourly
                 schedule.ScheduleType = WisemanScheduleTypeEnum.Periodically
                 schedule.ScheduleDays = New SchedulerAllowedDays(0)
-                schedule.ScheduleTime = New DateTime(2017, 1, 1, 0, 0, 20)
+                schedule.ScheduleTime = New DateTime(2017, 1, 1, 1, 0, 0)
             End If
 
             schedule.ScheduleLastRun = Settings.LastDisplayTime
