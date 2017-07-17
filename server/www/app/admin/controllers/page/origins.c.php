@@ -1,5 +1,5 @@
 <?php
-	$this->setPageTitle('origins');	
+	$this->setPageTitle('Origins');	
 	$this->renderAdminTable(
 		'origins', 		
 		'origin',
